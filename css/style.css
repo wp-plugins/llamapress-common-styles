@@ -1,0 +1,393 @@
+/* Table of Contents
+
+        - Layout
+	- Column Classes
+	- Image grid
+        - Default buttons
+	- Plugins
+		- Genesis Services CPT
+		- Genesis Gallery CPT
+		- Genesis Portfolio CPT
+                - Genesis Featured Post
+        - Media Queries
+
+
+*/
+
+.lp-text-center {
+    text-align: center;
+}
+.aligncenter{
+    text-align: center;
+}
+
+/* Column Classes
+	Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+/* Image grid
+--------------------------------------------- */
+.lp-grid-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px !important;
+    text-align: center;
+}
+.lp-grid-item img{
+    width: 100%;
+    padding: 0;
+    display: block;
+    max-width: 250px;
+}
+.lp-grid-item strong{
+    width: 100%;
+    background-color: #dddddd;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+    display: block;
+    max-width: 250px;
+}
+.lp-grid-item .lp-caption{
+background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    text-shadow: #000 1px 1px 0;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    max-width: 250px;
+    text-align: center;
+    margin: 0px auto;
+}
+.lp-grid-item .lp-caption .caption_info{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 55%;
+}
+.lp-grid-item:hover > div div.lp-caption{
+    opacity: 1.0;
+}
+  
+.lp-grid-item:hover > div .lp-caption .caption_info{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 15%;
+}    
+
+.lp-grid-item:hover > div .lp-caption .caption_push{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 2%;
+}
+.lp-grid-item:hover > .lp-caption .caption_push{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 2%;
+}
+.lp-grid-item:hover > div{
+    opacity: 1.0;
+}
+  
+.lp-grid-item:hover > .lp-caption .caption_info{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 15%;
+}    
+
+.lp-grid-item:hover > .lp-caption .caption_push{
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-top: 2%;
+} 
+.lp-mosaic img, .lp-mosaic .lp-caption{
+    max-width: none;
+}
+.lp-mosaic .lp-grid-item:hover > .lp-caption .caption_info{
+    margin-top: 2%;
+} 
+.lp-mosaic .lp-grid-item .lp-caption{
+    padding: 20px;
+}
+.lp-mosaic .five-sixths,
+.lp-mosaic .four-sixths,
+.lp-mosaic .one-fourth,
+.lp-mosaic .one-half,
+.lp-mosaic .one-sixth,
+.lp-mosaic .one-third,
+.lp-mosaic .three-fourths,
+.lp-mosaic .three-sixths,
+.lp-mosaic .two-fourths,
+.lp-mosaic .two-sixths,
+.lp-mosaic .two-thirds,
+.lp-mosaic .one-half,
+.lp-mosaic .three-sixths,
+.lp-mosaic .two-fourths,
+.lp-mosaic .one-third,
+.lp-mosaic .two-sixths,
+.lp-mosaic .four-sixths,
+.lp-mosaic .two-thirds,
+.lp-mosaic .one-fourth,
+.lp-mosaic .three-fourths,
+.lp-mosaic .one-sixth,
+.lp-mosaic .five-sixths,
+.lp-mosaic .first {
+	margin-left: 0px;
+}
+.lp-mosaic .one-half,
+.lp-mosaic .three-sixths,
+.lp-mosaic .two-fourths {
+	width: 50%;
+}
+
+.lp-mosaic .one-third,
+.lp-mosaic .two-sixths {
+	width: 33.3%;
+}
+
+.lp-mosaic .four-sixths,
+.lp-mosaic .two-thirds {
+	width: 66.81196581196582%;
+}
+
+.lp-mosaic .one-fourth {
+	width: 25%;
+}
+
+.lp-mosaic .one-sixth {
+	width: 16.66%;
+}
+
+.lp-mosaic .one-fifth {
+	width: 20%;
+	float: left;
+}
+
+.lp-mosaic .lp-grid-item{
+    margin-bottom: 0px !important;
+}
+
+/*
+Default buttons
+---------------------------------------------------------------------------------------------------- */
+.lp-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.lp-btn-white {
+    color: #fff !important;
+    font-weight: bold;
+    border: 2px solid #fff !important;
+    background-color: transparent;
+}
+.lp-btn-white:hover{
+    color: #888 !important;
+    background-color: #fff;
+    text-shadow: none;
+    border: 2px solid #fff !important;
+}
+.lp-btn-dark {
+    color: #aaa !important;
+    font-weight: bold;
+    border: 2px solid #aaa !important;
+    background-color: transparent;
+}
+.lp-btn-dark:hover{
+    color: #fff !important;
+    background-color: #aaa;
+    text-shadow: none;
+    border: 2px solid #aaa !important;
+}
+.lp-btn-lg{
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+/*
+Plugins
+---------------------------------------------------------------------------------------------------- */
+/* Genesis Services CPT */
+.lp-service{
+    display: inline-block;
+    text-align: center;
+}
+/* Genesis Gallery CPT */
+.lp-gallery-block .one-third, .lp-gallery-block .one-fourth {
+    text-align: center;
+}
+.lp-gallery{
+    text-align: center;
+    margin: 0px auto;
+    display: inline-block;
+}
+/* Genesis Portfolio CPT */
+.lp-portfolio-item{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0px auto;
+}
+/* Genesis Featured Posts */
+.featuredpost .has-post-thumbnail .alignleft{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.featuredpost .has-post-thumbnail .alignright{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.featuredpost .avatar{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+        .lp-mosaic .five-sixths,
+        .lp-mosaic .four-sixths,
+        .lp-mosaic .one-fourth,
+        .lp-mosaic .one-half,
+        .lp-mosaic .one-sixth,
+        .lp-mosaic .one-third,
+        .lp-mosaic .three-fourths,
+        .lp-mosaic .three-sixths,
+        .lp-mosaic .two-fourths,
+        .lp-mosaic .two-sixths,
+        .lp-mosaic .two-thirds,
+        .lp-mosaic .one-half,
+        .lp-mosaic .three-sixths,
+        .lp-mosaic .two-fourths,
+        .lp-mosaic .one-third,
+        .lp-mosaic .two-sixths,
+        .lp-mosaic .four-sixths,
+        .lp-mosaic .two-thirds,
+        .lp-mosaic .one-fourth,
+        .lp-mosaic .three-fourths,
+        .lp-mosaic .one-sixth,
+        .lp-mosaic .five-sixths,
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		margin: 0;
+		width: 100%;
+	}
+        #home-featured{
+            padding: 3%;
+        }
+	.genesis-nav-menu a,
+	.genesis-nav-menu > .first > a,
+	.genesis-nav-menu > .last > a {
+		padding: 20px 16px;
+		padding: 2rem 1.6rem;
+	}
+        .lp-caption{
+            display: none;
+        }
+        .lp-gallery .lp-caption{
+            display: block;
+        }
+        .lp-grid-item a{
+            width: 100%;
+            display: block;
+        }
+        .lp-testimonial .lp-profile_pic{
+            padding-right: 40px !important;
+        }
+}
+@media all and (max-width: 1140px) and (min-width: 768px){
+    .lp-hidden-md{
+        display: none;
+    }
+}
