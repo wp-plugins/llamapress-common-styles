@@ -1,8 +1,7 @@
 === LlamaPress Common Styles ===
 Contributors: James Roberts
-Tags: Genesis, LlamaPress
 Requires at least: 3.9
-Tested up to: 3.9.2
+Tested up to: 4.0
 License: GPL2
 
 Adds common styles shared by LlamaPress themes and plugins.
