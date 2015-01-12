@@ -298,8 +298,10 @@ Plugins
 }
 .lp-gallery{
     text-align: center;
-    margin: 0px auto;
     display: inline-block;
+}
+.lp-gallery a{
+    border: none !important;
 }
 /* Genesis Portfolio CPT */
 .lp-portfolio-item{
